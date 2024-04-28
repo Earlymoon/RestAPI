@@ -87,7 +87,7 @@ app.delete("/api/products", async (req, res) => {
     const deletedProducts = await productsData.deleteMany({});
     res.status(200).json(deletedProducts);
 
-    res.status(201).send(deletedProducts);
+    // res.status(201).send(deletedProducts);
   } catch (error) {
     res.status(500).send(error);
   }
